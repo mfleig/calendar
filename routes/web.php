@@ -19,3 +19,7 @@ Route::resource('events', 'EventsController',['only' => ['index', 'store', 'upda
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('posts/create', 'PostsController@create');
+Route::get('blog', 'PostsController@index');
+Route::post('posts', 'PostsController@store');
